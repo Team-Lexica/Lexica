@@ -40,3 +40,11 @@ float Cuboid::distance(const Vector& p) const
  return std::max({lx,ly,lz});
 }
 
+//Torus
+Torus::Torus(float R,float r):R(R),r(r){}
+
+float Torus::distance(const Vector& p) const
+{
+    float q=std::sqrt(p.x*p.x+p.y*p.y)-R;
+    return std::sqrt(q*q+p.z*p.z)-r;
+}

@@ -15,4 +15,8 @@ Cuboid A(7);
 g.sample(A);
 g.exportf("cube.obj");
 
+Torus t(5,2);
+g.sample(t);
+g.exportf("torus.obj");
+
 }

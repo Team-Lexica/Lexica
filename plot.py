@@ -4,7 +4,7 @@ x = []
 y = []
 z = []
 
-with open("cube.obj") as file:
+with open("torus.obj") as file:
     for line in file:
         if line.startswith("v "):
             parts = line.split()

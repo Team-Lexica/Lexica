@@ -33,3 +33,11 @@ public:
     Cuboid(float l);
     float distance(const Vector& p) const override; 
 };
+
+class Torus : public DefineClass
+{
+    float r,R;
+public:
+    Torus(float R,float r);
+    float distance(const Vector& p) const override;
+};
