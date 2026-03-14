@@ -4,7 +4,7 @@ x = []
 y = []
 z = []
 
-with open("cylinder.obj") as file:
+with open("sphere.obj") as file:
     for line in file:
         if line.startswith("v "):
             parts = line.split()
@@ -15,6 +15,6 @@ with open("cylinder.obj") as file:
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-ax.scatter(x, y, z, s=5,color="green")
+ax.scatter(x, y, z, s=2,color="green")
 
 plt.show()
