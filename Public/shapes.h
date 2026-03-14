@@ -24,3 +24,12 @@ public:
     Cylinder(float r, float h);
     float distance(const Vector& p) const override;
 };
+
+class Cuboid : public DefineClass
+{
+    float l,b,h;
+public:
+    Cuboid(float l,float b,float h);
+    Cuboid(float l);
+    float distance(const Vector& p) const override; 
+};
