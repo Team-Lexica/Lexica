@@ -2,21 +2,14 @@
 
 int main(){
 
-Grid g(40,0.5);
-Sphere s(7);
-g.sample(s);
-g.exportf("sphere.obj");
+Grid g(40,0.3);
 
-Cylinder c(7 ,7);
-g.sample(c);
-g.exportf("cylinder.obj");
 
-Cuboid A(7);
-g.sample(A);
-g.exportf("cube.obj");
-
-Torus t(5,2);
+Torus t(6,2);
 g.sample(t);
 g.exportf("torus.obj");
 
+Cylinder C(3,4);
+g.sample(C);
+g.exportf("cylinder.obj");
 }
