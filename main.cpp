@@ -1,15 +1,13 @@
 #include "grid.h"
 
 int main(){
-
 Grid g(40,0.3);
+Cylinder c(2.5,10);
+Sphere s(4);
+Subtract sub(&s ,&c);
 
 
-Torus t(6,2);
-g.sample(t);
-g.exportf("torus.obj");
+g.sample(sub);
+g.exportf("subtracted.obj");
 
-Cylinder C(3,4);
-g.sample(C);
-g.exportf("cylinder.obj");
 }

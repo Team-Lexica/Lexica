@@ -2,6 +2,7 @@
 
 #include "shapes.h"
 #include "vector.h"
+#include "operations.h"
 #include <vector>
 #include <string>
 

@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 x = []
 y = []
 z = []
-
-with open("torus.obj") as file:
+s=input()
+with open(s) as file:
     for line in file:
         if line.startswith("v "):
             parts = line.split()
