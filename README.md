@@ -31,3 +31,16 @@ distance(point)
 
 Implementation: [`shapes.cpp`](./Private/shapes.cpp)
 
+## 🌌 From a Point to a World
+
+Every complex structure in Lexica starts from something extremely simple:
+
+👉 a single point in 3D space
+
+## 🌐 The Grid — “Turning space into structure”
+
+The grid is how we turn space into something computable.
+
+We define a 3D region using:
+- Size → how far the space extends
+- Voxel size → distance between points
