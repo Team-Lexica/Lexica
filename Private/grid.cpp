@@ -42,7 +42,7 @@ void Grid::sample(DefineClass& shape)
     }
 }
 
-// extracting the points whose sdf value is negative 
+// extracting the points with negative sdf value 
 
 void Grid::exportf(const std::string& filename)
 {
