@@ -2,12 +2,15 @@
 #include <fstream>
 #include <iostream>
 
+// A canvas is being defined 
 Grid::Grid(int s, float vs)
 {
     size = s;
     voxel_size = vs;
     model.resize(size * size * size);
 }
+/* we iterate all over the grid that we created and calculate distance(point)(a overriden function
+obtained after applying all the operations ) for each andevery point in space and store in the model array*/
 
 void Grid::sample(DefineClass& shape)
 {
@@ -29,6 +32,8 @@ void Grid::sample(DefineClass& shape)
         }
     }
 }
+
+// extracting the points whose sdf value is negative 
 
 void Grid::exportf(const std::string& filename)
 {

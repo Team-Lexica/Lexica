@@ -2,6 +2,9 @@
 #include <cmath>
 #include <algorithm>
 
+// each shape is the child class of the class DefineClass
+// we are overriding the distance function each time
+
 //Sphere 
 Sphere::Sphere(float r)
 {

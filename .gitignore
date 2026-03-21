@@ -1,0 +1,57 @@
+# 🔧 Build files
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dll
+
+# 🧱 CMake / build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# 🧾 Object / binary files
+*.obj
+
+# 📦 Output files (your generated meshes)
+*.obj
+*.stl
+*.ply
+
+# 📝 Logs
+*.log
+
+# 🧠 IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# 🐧 Linux / system files
+*~
+*.swp
+*.swo
+
+# 🍎 macOS
+.DS_Store
+
+# 🪟 Windows
+Thumbs.db
+
+# 🧪 Temporary files
+temp/
+tmp/
+# 🐍 Python virtual environments
+lexica/
+venv/
+.env/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
