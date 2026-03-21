@@ -10,7 +10,7 @@ Grid::Grid(int s, float vs)
     model.resize(size * size * size);
 }
 /* we iterate all over the grid that we created and calculate distance(point)(a overriden function
-obtained after applying all the operations ) for each andevery point in space and store in the model array*/
+obtained after applying all the operations ) for each and every point in space and store in the model array*/
 
 void Grid::sample(DefineClass& shape)
 {
@@ -33,7 +33,7 @@ void Grid::sample(DefineClass& shape)
     }
 }
 
-// extracting the points whose sdf value is negative 
+// extracting the points with negative sdf value 
 
 void Grid::exportf(const std::string& filename)
 {
