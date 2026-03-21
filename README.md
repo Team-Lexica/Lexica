@@ -44,3 +44,7 @@ The grid is how we turn space into something computable.
 We define a 3D region using:
 - Size → how far the space extends
 - Voxel size → distance between points
+
+
+
+See: [`grid.cpp`](./Private/grid.cpp)
