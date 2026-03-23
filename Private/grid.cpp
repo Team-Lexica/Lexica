@@ -28,9 +28,9 @@ void Grid::sample(DefineClass& shape)
             {
                 /*here it is calculating the point coordinates  from origin (size by 2 - to get distance from center of the axis)*/
                 Vector p(
-                    (x - size/2) * voxel_size, // voxel size is the gap between two points on the axis
-                    (y - size/2) * voxel_size,
-                    (z - size/2) * voxel_size
+                    (x+0.5 - size/2) * voxel_size, // voxel size is the gap between two points on the axis
+                    (y+0.5 - size/2) * voxel_size,
+                    (z+0.5 - size/2) * voxel_size
                 );
 
                 float d = shape.distance(p);// distance(p) the overridden function will give the distance of the vector p from surface
@@ -39,6 +39,19 @@ void Grid::sample(DefineClass& shape)
                 // storing the distance value for all the 3d points in model
             }
         }
+    }
+}
+
+void Grid::sampleDensity(float epsilon)
+{
+    rho.resize(size * size * size);
+    for(int i = 0; i < size * size * size; i++)
+    {
+        float val = 0.5f - model[i] / epsilon;
+        // clamp to [0,1]
+        if(val < 0.0f) val = 0.0f;
+        if(val > 1.0f) val = 1.0f;
+        rho[i] = val;
     }
 }
 
@@ -57,9 +70,9 @@ void Grid::exportf(const std::string& filename)
 
         if(d < 0)
         {
-            float px = (x - size/2) * voxel_size; 
-            float py = (y - size/2) * voxel_size;
-            float pz = (z - size/2) * voxel_size;
+            float px = (x+0.5 - size/2) * voxel_size; 
+            float py = (y+0.5 - size/2) * voxel_size;
+            float pz = (z+0.5 - size/2) * voxel_size;
 
             file << "v " << px << " " << py << " " << pz << std::endl; // writing it in the output file 
         }
